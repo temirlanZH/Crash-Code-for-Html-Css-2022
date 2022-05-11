@@ -324,3 +324,128 @@ li:nth-child(odd){
         translateY()
     */
 }
+
+
+#anim-p{
+    width: 100px;
+    height: 100px;
+    background: red;
+    font-size: 85px;
+    text-align: center;
+    margin: 0px;
+
+}
+
+#anim-p:hover{
+    animation: myFont;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myColorAnimation{
+    /* from{background-color: red;}
+    to{background-color: blue;}     */
+    0%{background-color: red;}
+    20%{background-color: orange;}
+    40%{background-color: yellow;}
+    60%{background-color: green;}
+    80%{background-color: blue;}
+    100%{background-color: purple;}
+}
+
+@keyframes myRotateAnimation{
+    100%{transform: rotateX(360deg);}
+    100%{transform: rotateY(360deg);}
+    100%{transform: rotateZ(360deg);}
+}
+
+@keyframes myTranslate{
+    50%{transform: translate(100px,0);}
+    50%{transform: translate(0,100px);}
+    50%{transform: translate(100px,100px);}
+}
+
+@keyframes myScale{
+    50%{transform: scale(0.5,0.5);}
+}
+
+@keyframes myOpacity{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes myFont{
+    0%{font-size: 85px;}
+    50%{font-size: 400px;}
+    100%{font-size: 85px;}
+}
+
+
+/* Navigation Bar Css */
+.nav-ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: #444;
+}
+
+#nav-li a{
+    float: left;
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid black;
+    min-width: 60px;
+}
+
+#nav-li a:hover{
+    background-color: #222;
+
+    animation: myGrowAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myGrowAnimation{
+    50% {text-shadow: 0px 0px 10px yellow;}
+}
+
+
+.flex-demo{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #444;
+    /* flex-direction: column-reverse;
+    width: 110px; */
+
+    /* justify-content: flex-start;
+    justify-content: center;
+    justify-content: flex-end;
+    justify-content: space-between; */
+
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-demo div{
+    color: #00aa00;
+    height: 100px;
+    width: 100px;
+    background-color: #111;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    margin: 5px;
+}
+
+.fa-home{
+    color: #00aa00;
+}
+
+.fa-youtube{
+    color: #111;
+}
